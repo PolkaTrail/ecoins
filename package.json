@@ -1,0 +1,46 @@
+{
+	"name": "ecoins",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"compile": "npx hardhat clean; npx hardhat compile",
+		"accounts": "npx hardhat accounts",
+		"test": "npx hardhat test --network ganache",
+		"testGas": "REPORT_GAS=true npx hardhat test --network ganache",
+		"prettier": "prettier --write 'contracts/**/*.sol'",
+		"deploy:matic_test": "NETWORK=matic_test npx hardhat run --network matic_test scripts/deploy.js",
+		"deploy:matic": "NETWORK=matic npx hardhat run --network matic scripts/deploy.js",
+		"deploy:rinkeby": "NETWORK=rinkeby npx hardhat run --network rinkeby scripts/deploy.js",
+		"deploy:mainnet": "NETWORK=mainnet npx hardhat run --network mainnet scripts/deploy.js",
+		"deploy:bsc_test": "NETWORK=bsc_test npx hardhat run --network bsc_test scripts/deploy.js",
+		"deploy:bsc": "NETWORK=bsc npx hardhat run --network bsc scripts/deploy.js"
+	},
+	"author": "Andrei",
+	"license": "MIT",
+	"dependencies": {
+		"@openzeppelin/contracts": "^4.0.0",
+		"@truffle/hdwallet-provider": "1.2.5",
+		"dotenv": "^8.2.0",
+		"ethereumjs-util": "^6.2.1"
+	},
+	"devDependencies": {
+		"@nomiclabs/hardhat-ethers": "^2.0.2",
+		"@nomiclabs/hardhat-etherscan": "^2.1.1",
+		"@nomiclabs/hardhat-waffle": "^2.0.1",
+		"@nomiclabs/hardhat-web3": "^2.0.0",
+		"@openzeppelin/test-helpers": "^0.5.10",
+		"chai": "^4.3.4",
+		"dotenv": "^8.2.0",
+		"ethereum-waffle": "^3.3.0",
+		"ethers": "^5.0.32",
+		"hardhat": "^2.1.2",
+		"hardhat-gas-reporter": "^1.0.4",
+		"prettier": "^2.2.1",
+		"prettier-plugin-solidity": "^1.0.0-beta.9",
+		"web3": "^1.3.4",
+		"@chainlink/contracts": "^0.1.6",
+		"@chainlink/test-helpers": "0.0.5",
+		"@chainlink/token": "^1.1.0"
+	}
+}
